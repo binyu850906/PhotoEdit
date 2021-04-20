@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		791FB65D262AB1C300435576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB65C262AB1C300435576 /* AppDelegate.swift */; };
 		791FB65F262AB1C300435576 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB65E262AB1C300435576 /* SceneDelegate.swift */; };
-		791FB661262AB1C300435576 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB660262AB1C300435576 /* ViewController.swift */; };
 		791FB664262AB1C300435576 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791FB662262AB1C300435576 /* Main.storyboard */; };
 		791FB666262AB1C400435576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 791FB665262AB1C400435576 /* Assets.xcassets */; };
 		791FB669262AB1C400435576 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 791FB667262AB1C400435576 /* LaunchScreen.storyboard */; };
+		791FB671262AB28D00435576 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB670262AB28D00435576 /* MainViewController.swift */; };
+		791FB674262AB2CF00435576 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB673262AB2CF00435576 /* EditViewController.swift */; };
+		791FB676262AB54000435576 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB675262AB54000435576 /* PhotoCollectionViewCell.swift */; };
+		791FB679262AC67700435576 /* EditImageUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB678262AC67700435576 /* EditImageUIView.swift */; };
+		791FB67B262AD0D100435576 /* EditStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB67A262AD0D100435576 /* EditStatus.swift */; };
+		791FB67E262AD1B400435576 /* FilterProp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB67D262AD1B400435576 /* FilterProp.swift */; };
+		791FB680262AD44100435576 /* PhotoEffectEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB67F262AD44100435576 /* PhotoEffectEnum.swift */; };
+		791FB682262AD52500435576 /* TextFieldInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB681262AD52500435576 /* TextFieldInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		791FB659262AB1C300435576 /* PhotoEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		791FB65C262AB1C300435576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		791FB65E262AB1C300435576 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		791FB660262AB1C300435576 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		791FB663262AB1C300435576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		791FB665262AB1C400435576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		791FB668262AB1C400435576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		791FB66A262AB1C400435576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		791FB670262AB28D00435576 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		791FB673262AB2CF00435576 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		791FB675262AB54000435576 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		791FB678262AC67700435576 /* EditImageUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageUIView.swift; sourceTree = SOURCE_ROOT; };
+		791FB67A262AD0D100435576 /* EditStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStatus.swift; sourceTree = "<group>"; };
+		791FB67D262AD1B400435576 /* FilterProp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterProp.swift; sourceTree = "<group>"; };
+		791FB67F262AD44100435576 /* PhotoEffectEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEffectEnum.swift; sourceTree = "<group>"; };
+		791FB681262AD52500435576 /* TextFieldInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +54,9 @@
 		791FB650262AB1C300435576 = {
 			isa = PBXGroup;
 			children = (
+				791FB67C262AD0DA00435576 /* Model */,
+				791FB677262AB54900435576 /* View */,
+				791FB672262AB29200435576 /* Controller */,
 				791FB65B262AB1C300435576 /* PhotoEdit */,
 				791FB65A262AB1C300435576 /* Products */,
 			);
@@ -58,13 +75,41 @@
 			children = (
 				791FB65C262AB1C300435576 /* AppDelegate.swift */,
 				791FB65E262AB1C300435576 /* SceneDelegate.swift */,
-				791FB660262AB1C300435576 /* ViewController.swift */,
 				791FB662262AB1C300435576 /* Main.storyboard */,
 				791FB665262AB1C400435576 /* Assets.xcassets */,
 				791FB667262AB1C400435576 /* LaunchScreen.storyboard */,
 				791FB66A262AB1C400435576 /* Info.plist */,
 			);
 			path = PhotoEdit;
+			sourceTree = "<group>";
+		};
+		791FB672262AB29200435576 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				791FB670262AB28D00435576 /* MainViewController.swift */,
+				791FB673262AB2CF00435576 /* EditViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		791FB677262AB54900435576 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				791FB678262AC67700435576 /* EditImageUIView.swift */,
+				791FB675262AB54000435576 /* PhotoCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		791FB67C262AD0DA00435576 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				791FB67A262AD0D100435576 /* EditStatus.swift */,
+				791FB681262AD52500435576 /* TextFieldInfo.swift */,
+				791FB67F262AD44100435576 /* PhotoEffectEnum.swift */,
+				791FB67D262AD1B400435576 /* FilterProp.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				791FB661262AB1C300435576 /* ViewController.swift in Sources */,
+				791FB679262AC67700435576 /* EditImageUIView.swift in Sources */,
+				791FB674262AB2CF00435576 /* EditViewController.swift in Sources */,
+				791FB680262AD44100435576 /* PhotoEffectEnum.swift in Sources */,
+				791FB67E262AD1B400435576 /* FilterProp.swift in Sources */,
+				791FB676262AB54000435576 /* PhotoCollectionViewCell.swift in Sources */,
+				791FB671262AB28D00435576 /* MainViewController.swift in Sources */,
+				791FB67B262AD0D100435576 /* EditStatus.swift in Sources */,
+				791FB682262AD52500435576 /* TextFieldInfo.swift in Sources */,
 				791FB65D262AB1C300435576 /* AppDelegate.swift in Sources */,
 				791FB65F262AB1C300435576 /* SceneDelegate.swift in Sources */,
 			);
