@@ -26,12 +26,15 @@ class EditImageUIView: UIView {
     var currentEdge: Edge = .none
     var touchStart = CGPoint.zero
     var imageView = UIImageView()
+    let originalImage: UIImage
+    var displayImage = UIImage()
     
     var isMirrored: Bool = false
     var rotateCounts: Int = 0
 
     init?(frame: CGRect, editImage: UIImage) {
-
+        self .originalImage = editImage
+        self.displayImage = editImage.copy() as! UIImage
         self.imageInitW = editImage.size.width
         self.imageInitH = editImage.size.height
         super.init(frame: frame)
@@ -42,6 +45,8 @@ class EditImageUIView: UIView {
         
         editInitialize()
         self.addSubview(imageView)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(useFilter), name: NSNotification.Name(rawValue: "useFilter"), object: nil)
         
     }
     
@@ -62,7 +67,15 @@ class EditImageUIView: UIView {
             self.transform = CGAffineTransform(rotationAngle: 0)
         }
         
+        imageView.image = originalImage
         
+        for prop in editStatus.colorControls{
+            prop.value = prop.defaultValue
+        }
+        
+        editStatus.effect = nil
+        
+        NotificationCenter.default.post(name: NSNotification.Name("refreshViews"), object: nil)
         
     }
     
@@ -156,6 +169,33 @@ class EditImageUIView: UIView {
         self.frame.origin.y = (screenH - self.frame.height)/2
        }
     
+    @objc func useFilter(){
+        
+        let status = editStatus.colorControls
+        let ciImage = CIImage(image: displayImage)
+        let filter = CIFilter(name: "CIColorControls")
+        
+        filter?.setValue(ciImage, forKey: kCIInputImageKey)
+        filter?.setValue(status[0].value, forKey: kCIInputBrightnessKey)
+        filter?.setValue(status[1].value, forKey: kCIInputContrastKey)
+        filter?.setValue(status[2].value, forKey: kCIInputSaturationKey)
+        
+        
+        //是否使用濾鏡
+        if let effectName = getEffectKey(effect: editStatus.effect){
+            let effectFilter = CIFilter(name: effectName)
+            effectFilter?.setValue(filter?.outputImage, forKey: kCIInputImageKey)
+            if let outputCIImage = effectFilter?.outputImage {
+                let filterImage = UIImage(ciImage: outputCIImage)
+                imageView.image = filterImage
+            }
+        }else {
+            if let outputCIImage = filter?.outputImage {
+                let filterImage = UIImage(ciImage: outputCIImage)
+                imageView.image = filterImage
+        }
+      }
+    }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

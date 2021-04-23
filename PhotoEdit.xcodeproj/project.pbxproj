@@ -20,6 +20,7 @@
 		791FB67E262AD1B400435576 /* FilterProp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB67D262AD1B400435576 /* FilterProp.swift */; };
 		791FB680262AD44100435576 /* PhotoEffectEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB67F262AD44100435576 /* PhotoEffectEnum.swift */; };
 		791FB682262AD52500435576 /* TextFieldInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FB681262AD52500435576 /* TextFieldInfo.swift */; };
+		79E8BB1E263156DC003DC0CD /* PhotoEffectUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E8BB1D263156DC003DC0CD /* PhotoEffectUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		791FB67D262AD1B400435576 /* FilterProp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterProp.swift; sourceTree = "<group>"; };
 		791FB67F262AD44100435576 /* PhotoEffectEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEffectEnum.swift; sourceTree = "<group>"; };
 		791FB681262AD52500435576 /* TextFieldInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInfo.swift; sourceTree = "<group>"; };
+		79E8BB1D263156DC003DC0CD /* PhotoEffectUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEffectUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				791FB678262AC67700435576 /* EditImageUIView.swift */,
 				791FB675262AB54000435576 /* PhotoCollectionViewCell.swift */,
+				79E8BB1D263156DC003DC0CD /* PhotoEffectUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			files = (
 				791FB679262AC67700435576 /* EditImageUIView.swift in Sources */,
 				791FB674262AB2CF00435576 /* EditViewController.swift in Sources */,
+				79E8BB1E263156DC003DC0CD /* PhotoEffectUIView.swift in Sources */,
 				791FB680262AD44100435576 /* PhotoEffectEnum.swift in Sources */,
 				791FB67E262AD1B400435576 /* FilterProp.swift in Sources */,
 				791FB676262AB54000435576 /* PhotoCollectionViewCell.swift in Sources */,
